@@ -1,0 +1,589 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #edf5ff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* === MAIN APP === */
+
+.app {
+    width: 100%;
+    max-width: 430px;
+    min-height: 100vh;
+    background: #f7fbff;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 75px;
+}
+
+
+/* === HEADER === */
+
+.header {
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+}
+
+.menu {
+    font-size: 23px;
+    color: #263f59;
+    cursor: pointer;
+}
+
+
+/* === Transparent bell === */
+
+.notification {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+}
+
+.notification svg {
+    width: 27px;
+    height: 27px;
+    stroke: #234e78;
+    fill: none;
+    stroke-width: 2;
+}
+
+.notification-dot {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    width: 7px;
+    height: 7px;
+    background: #ef5364;
+    border-radius: 50%;
+}
+
+
+/* === WELCOME === */
+
+.welcome {
+    padding: 2px 15px 0;
+    position: relative;
+    z-index: 2;
+}
+
+.welcome p {
+    color: #34495e;
+    font-size: 13px;
+    margin-bottom: 3px;
+}
+
+.welcome h1 {
+    color: #123b68;
+    font-size: 27px;
+    margin-bottom: 6px;
+}
+
+.welcome .subtitle {
+    color: #53697d;
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+
+/* === SUN === */
+
+.sun {
+    position: absolute;
+    top: 72px;
+    right: 35px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #ffd966;
+    box-shadow:
+        0 -15px 0 -12px #f4c95d,
+        0 15px 0 -12px #f4c95d,
+        15px 0 0 -12px #f4c95d,
+        -15px 0 0 -12px #f4c95d,
+        11px 11px 0 -12px #f4c95d,
+        -11px -11px 0 -12px #f4c95d,
+        11px -11px 0 -12px #f4c95d,
+        -11px 11px 0 -12px #f4c95d;
+    opacity: .8;
+}
+
+
+/* === STUDY DESK === */
+
+.desk {
+    height: 115px;
+    position: relative;
+    margin-top: 4px;
+}
+
+
+/* === Books === */
+
+.books {
+    position: absolute;
+    left: 35px;
+    bottom: 22px;
+    width: 78px;
+}
+
+.book {
+    height: 9px;
+    border-radius: 2px;
+    margin-top: 3px;
+}
+
+.book.one {
+    width: 55px;
+    background: #e58b4b;
+    margin-left: 12px;
+}
+
+.book.two {
+    width: 70px;
+    background: #4f83c1;
+    margin-left: 4px;
+}
+
+.book.three {
+    width: 78px;
+    background: #203f67;
+}
+
+
+/* === Laptop === */
+
+.laptop {
+    position: absolute;
+    left: 50%;
+    bottom: 31px;
+    transform: translateX(-50%);
+    width: 83px;
+    height: 53px;
+}
+
+.screen {
+    position: absolute;
+    width: 78px;
+    height: 48px;
+    background: #1b304a;
+    border-radius: 4px;
+    transform: skew(-7deg);
+    left: 0;
+    top: 0;
+    box-shadow: 0 3px 5px rgba(0,0,0,.12);
+}
+
+.screen::after {
+    content: "";
+    position: absolute;
+    width: 62px;
+    height: 35px;
+    background: #2e5278;
+    left: 8px;
+    top: 6px;
+    border-radius: 2px;
+}
+
+.laptop-base {
+    position: absolute;
+    width: 100px;
+    height: 7px;
+    background: #b6c8d8;
+    border-radius: 50%;
+    bottom: -5px;
+    left: -8px;
+}
+
+
+/* === Plant === */
+
+.plant {
+    position: absolute;
+    right: 28px;
+    bottom: 20px;
+    width: 48px;
+    height: 90px;
+}
+
+.pot {
+    position: absolute;
+    bottom: 0;
+    left: 8px;
+    width: 32px;
+    height: 28px;
+    background: #c7d6cf;
+    border-radius: 2px 2px 10px 10px;
+}
+
+.stem {
+    position: absolute;
+    width: 4px;
+    height: 58px;
+    background: #52935e;
+    bottom: 22px;
+    left: 23px;
+}
+
+.leaf {
+    position: absolute;
+    width: 21px;
+    height: 34px;
+    background: #55a768;
+    border-radius: 100% 0 100% 0;
+}
+
+.leaf.one {
+    left: 2px;
+    top: 28px;
+    transform: rotate(-35deg);
+}
+
+.leaf.two {
+    right: 0;
+    top: 10px;
+    transform: rotate(35deg);
+}
+
+.leaf.three {
+    left: 1px;
+    top: 3px;
+    transform: rotate(-20deg);
+}
+
+.leaf.four {
+    right: 1px;
+    top: 38px;
+    transform: rotate(45deg);
+}
+
+
+/* === STAT CARDS === */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+    padding: 0 8px;
+}
+.stat-card {
+    background: white;
+    border-radius: 10px;
+    padding: 9px 7px;
+    min-height: 120px;
+    box-shadow: 0 2px 8px rgba(30,70,110,.06);
+}
+
+.stat-icon {
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.blue {
+    background: #e3f0ff;
+    color: #3276bd;
+}
+
+.yellow {
+    background: #fff1d6;
+    color: #d79b31;
+}
+
+.green {
+    background: #e0f6e9;
+    color: #35a36b;
+}
+
+.red {
+    background: #ffe5e8;
+    color: #e55467;
+}
+
+.stat-title {
+    font-size: 8px;
+    color: #66788a;
+    white-space: nowrap;
+ }
+
+.stat-number {
+    color: #173f67;
+    font-size: 21px;
+    font-weight: bold;
+    margin: 3px 0;
+}
+
+.stat-change {
+    font-size: 8px;
+    color: #42a76c;
+}
+
+.red-change {
+    color: #e65367;
+}
+
+
+/* === DEADLINES === */
+
+.deadlines {
+    margin: 12px 9px 0;
+    background: white;
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(30,70,110,.06);
+}
+
+.deadline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.deadline-title {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #173f67;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.deadline-title svg {
+    width: 18px;
+    height: 18px;
+    stroke: #3268e8;
+    fill: none;
+    stroke-width: 2;
+}
+
+.view-all {
+    font-size: 9px;
+    color: #3974ae;
+    text-decoration: none;
+}
+
+
+/* === TASK ITEMS === */
+
+.deadline-item {
+    display: flex;
+    align-items: center;
+    padding: 7px 0;
+    border-bottom: 1px solid #edf2f7;
+}
+
+.deadline-item:last-child {
+    border-bottom: none;
+}
+
+.task-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+    font-size: 14px;
+}
+
+.task-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.task-name {
+    font-size: 10px;
+    color: #334e68;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.task-date {
+    font-size: 8px;
+    color: #93a4b5;
+    margin-top: 3px;
+}
+
+.priority {
+    font-size: 8px;
+    padding: 4px 7px;
+    border-radius: 12px;
+    margin-left: 4px;
+}
+
+.urgent {
+    color: #df5c6c;
+    background: #fff0f2;
+}
+
+.high {
+    color: #d3972c;
+    background: #fff5df;
+}
+.medium {
+    color: #397eb5;
+    background: #e8f4ff;
+}
+
+.low {
+    color: #42a66c;
+    background: #e4f8ec;
+}
+
+
+/* === NO TASKS === */
+
+.no-task {
+    text-align: center;
+    color: #9aa9b8;
+    font-size: 11px;
+    padding: 20px 5px;
+}
+
+
+/* === BOTTOM NAVIGATION === */
+
+.bottom-nav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 65px;
+    background: white;
+    border-top: 1px solid #e5edf5;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    text-decoration: none;
+    color: #7d8d9b;
+    font-size: 9px;
+}
+
+.nav-item.active {
+    color: #3473df;
+    font-weight: bold;
+}
+
+.nav-icon {
+    width: 21px;
+    height: 21px;
+}
+
+.nav-icon svg {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+/* === Profile icon === */
+
+.profile-icon {
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    background: #eaebec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-icon svg {
+    width: 17px;
+    height: 17px;
+    stroke: white;
+    fill: none;
+    stroke-width: 2;
+}
+
+
+/* === TABLET / DESKTOP === */
+
+@media (min-width: 600px) {
+
+    body {
+        padding: 20px;
+        align-items: center;
+    }
+
+    .app {
+        max-width: 600px;
+        min-height: calc(100vh - 40px);
+        border-radius: 22px;
+        box-shadow: 0 8px 30px rgba(30,70,110,.1);
+    }
+
+    .bottom-nav {
+        border-radius: 0 0 22px 22px;
+    }
+
+    .stats {
+        padding-left: 15px;
+        padding-right: 15px;
+        gap: 10px;
+    }
+
+    .deadlines {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}
+
+@media (max-width: 360px) {
+
+    .stat-card {
+        padding: 7px 5px;
+    }
+
+    .stat-title {
+        font-size: 7px;
+    }
+
+    .stat-number {
+        font-size: 19px;
+    }
+
+    .stat-change {
+        font-size: 7px;
+    }
+
+    .deadline-item {
+        padding: 6px 0;
+    }
+
+    .task-name {
+        font-size: 9px;
+    }
+}

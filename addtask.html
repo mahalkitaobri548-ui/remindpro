@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RemindPro - Add New Task</title>
+    <link rel="stylesheet" href="addtask.css">
+    </head>
+
+<body>
+
+    <div class="app">
+
+
+        <!-- HEADER -->
+
+        <header class="header">
+
+            <button
+                class="back-btn"
+                onclick="goBack()">
+                ←
+            </button>
+
+            <h1 class="header-title">
+                Add New Task
+            </h1>
+
+        </header>
+
+
+        <!-- FORM -->
+
+        <main class="form-container">
+
+
+            <!-- TASK TITLE -->
+
+            <div class="form-group">
+
+                <label class="form-label">
+                    Task Title
+                </label>
+
+                <input
+                    type="text"
+                    id="taskTitle"
+                    class="input-box"
+                    placeholder="e.g. Research Paper">
+
+            </div>
+
+
+            <!-- DESCRIPTION -->
+
+            <div class="form-group">
+
+                <label class="form-label">
+                    Description (Optional)
+                </label>
+
+                <textarea
+                    id="taskDescription"
+                    class="description"
+                    placeholder="Add more details..."></textarea>
+
+            </div>
+
+
+            <!-- DUE DATE -->
+
+            <div class="form-group">
+
+                <label class="form-label">
+                    Due Date
+                </label>
+
+                <div class="date-wrapper">
+
+                    <input
+                        type="date"
+                        id="taskDate"
+                        class="input-box date-input">
+
+                    <span class="date-icon">
+                        ▣
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRIORITY -->
+
+            <div class="form-group">
+
+                <label class="form-label">
+                    Priority
+                </label>
+
+                <div class="priority-container">
+
+                    <button
+                        type="button"
+                        class="priority-btn low"
+                        onclick="selectPriority('Low', this)">
+                        Low
+                    </button>
+
+                    <button
+                        type="button"
+                        class="priority-btn medium selected"
+                        onclick="selectPriority('Medium', this)">
+                        Medium
+                    </button>
+
+                    <button
+                        type="button"
+                        class="priority-btn high"
+                        onclick="selectPriority('High', this)">
+                        High
+                    </button>
+
+                    <button
+                        type="button"
+                        class="priority-btn urgent"
+                        onclick="selectPriority('Urgent', this)">
+                        Urgent
+                    </button>
+
+                </div>
+
+            </div>
+
+
+        <!-- REMINDER -->
+
+            <div class="reminder-row">
+
+                <div class="reminder-left">
+
+                    <span class="bell-icon">
+
+                        <svg viewBox="0 0 24 24">
+
+                            <path d="
+                                M18 8
+                                a6 6 0 0 0-12 0
+                                c0 7-3 7-3 9
+                                h18
+                                c0-2-3-2-3-9">
+                            </path>
+
+                            <path d="M10 21h4"></path>
+
+                        </svg>
+
+                    </span>
+
+                    <span class="reminder-text">
+                        Set Reminder
+                    </span>
+
+                </div>
+
+                <label class="switch">
+
+                    <input
+                        type="checkbox"
+                        id="reminderToggle"
+                        checked>
+
+                        <span class="slider"></span>
+
+                </label>
+
+            </div>
+
+
+            <!-- SAVE TASK BUTTON -->
+
+            <button
+                type="button"
+                class="save-btn"
+                onclick="saveTask()">
+                Save Task
+            </button>
+
+        </main>
+
+    </div>
+
+    <script src="addtask.js"></script>
+
+</body>
+</html>

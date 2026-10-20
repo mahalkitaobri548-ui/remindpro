@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f5f8ff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* === CALENDAR DESIGNS ===*/
+
+.calendar {
+    position: absolute;
+    width: 75px;
+    height: 70px;
+    border: 3px solid #3268e8;
+    border-radius: 10px;
+    background: white;
+    opacity: 0.85;
+}
+
+.calendar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 18px;
+    background: #3268e8;
+    border-radius: 7px 7px 0 0;
+}
+
+.calendar::after {
+    content: "15";
+    position: absolute;
+    top: 25px;
+    left: 18px;
+    font-size: 25px;
+    font-weight: bold;
+    color: #b9d0f5;
+}
+
+.calendar-1 {
+    top: 150px;
+    right: calc(50% - 360px);
+    transform: rotate(8deg);
+}
+
+.calendar-2 {
+    top: 48%;
+    left: calc(50% - 365px);
+    transform: rotate(-12deg);
+}
+
+.calendar-3 {
+    bottom: 145px;
+    right: calc(50% - 350px);
+    transform: rotate(10deg);
+}
+
+.calendar-4 {
+    bottom: 100px;
+    left: calc(50% - 390px);
+    transform: rotate(-10deg);
+    opacity: 0.35;
+}
+
+.calendar .ring {
+    position: absolute;
+    top: -9px;
+    width: 7px;
+    height: 16px;
+    background: #f5a623;
+    border-radius: 5px;
+    z-index: 5;
+}
+
+.calendar .ring.left {
+    left: 15px;
+}
+
+.calendar .ring.right {
+    right: 15px;
+}
+
+
+/* === LOGIN BOX === */
+
+.login-box {
+    width: 430px;
+    background: white;
+    padding: 100px;
+    border-radius: 25px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    position: relative;
+    z-index: 3;
+}
+
+
+/* === REMINDPRO INSIDE BOX === */
+
+.brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: -55px;
+    margin-bottom: 35px;
+}
+
+.brand h1 {
+    font-size: 40px;
+    color: #101a3c;
+    font-weight: bold;
+}
+
+
+/* === BLUE BELL === */
+
+.bell {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    margin-right: 40px;
+}
+
+.bell-body {
+    position: absolute;
+    width: 32px;
+    height: 34px;
+    background: #3268e8;
+    border-radius: 18px 18px 7px 7px;
+    left: 8px;
+    top: 9px;
+}
+
+.bell-body::before {
+    content: "";
+    position: absolute;
+    width: 42px;
+    height: 7px;
+    background: #3268e8;
+    border-radius: 10px;
+    left: -5px;
+    bottom: 1px;
+}
+
+.bell-body::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 7px;
+    background: #f5a623;
+    border-radius: 0 0 10px 10px;
+    left: 11px;
+    bottom: -6px;
+}
+
+.bell-top {
+    position: absolute;
+    width: 18px;
+    height: 12px;
+    border: 4px solid #3268e8;
+    border-bottom: none;
+    border-radius: 15px 15px 0 0;
+    left: 15px;
+    top: 1px;
+}
+
+
+/* INPUT */
+
+.input-box {
+    display: block;
+    width: 150%;
+    height: 40px;
+    border: 1px solid #dddddd;
+    border-radius: 22px;
+    padding: 0 17px;
+    margin-bottom: 14px;
+    background: #ffffff;
+    color: #333333;
+    font-size: 18px;
+    outline: none;
+    margin-left: -55px;
+}
+
+.input-box::placeholder {
+    color: #8b8b8b;
+}
+
+.input-box:focus {
+    border-color: #3470e8;
+    box-shadow:
+        0 0 0 2px
+        rgba(52,112,232,.08);
+}
+
+
+/* LOGIN BUTTON */
+
+.login-btn {
+    display: block;
+    width: 150%;
+    height: 40px;
+    border: none;
+    border-radius: 23px;
+    background: #356be5;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 2px;
+    margin-left: -55px;
+}
+
+.login-btn:hover {
+    background: #2c5fd0;
+}
+
+
+/* SIGN UP */
+
+.signup-text {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 15px;
+    color: #333333;
+}
+
+.signup-text a {
+    color: #2864d8;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* === MOBILE === */
+
+@media (max-width: 600px) {
+
+    .login-box {
+        width: 90%;
+        padding: 35px 25px;
+    }
+
+    .brand h1 {
+        font-size: 28px;
+    }
+
+    .calendar-1 {
+        right: 3%;
+    }
+
+    .calendar-2 {
+        left: -15px;
+    }
+
+    .calendar-3 {
+        right: 2%;
+    }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - RemindPro</title>
+    <link rel="stylesheet" href="welcome.css">
+</head>
+
+<body>
+
+    <div class="welcome-container">
+
+
+        <!-- TOP BACKGROUND -->
+        <div class="top-shape"></div>
+
+
+        <!-- CALENDAR -->
+        <div class="calendar-icon">
+
+            <div class="ring left"></div>
+            <div class="ring right"></div>
+
+            <div class="check"></div>
+
+        </div>
+
+
+        <!-- BRAND -->
+        <h1 class="brand">
+            Smart<span>Remind</span>er
+        </h1>
+
+
+        <!-- TAGLINE -->
+        <p class="tagline">
+            Plan&nbsp; • &nbsp;Track&nbsp; • &nbsp;Achieve
+        </p>
+
+
+        <!-- GET STARTED -->
+        <a href="login.html" class="get-started">
+            Get Started
+            <span class="arrow">→</span>
+        </a>
+
+        
+        <!-- BOTTOM DECORATION -->
+        <div class="leaf"></div>
+        <div class="leaf two"></div>
+
+        <div class="wave-one"></div>
+        <div class="wave-two"></div>
+        <div class="wave-three"></div>
+
+    </div>
+
+    <script>
+        const getStarted = document.querySelector(".get-started");
+
+if (getStarted) {
+    getStarted.addEventListener("click", function () {
+        window.location.href = "login.html";
+    });
+}
+    </script>
+
+</body>
+</html>

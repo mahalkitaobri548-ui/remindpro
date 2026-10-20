@@ -1,0 +1,539 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #edf5ff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.app {
+    width: 100%;
+    max-width: 430px;
+    min-height: 100vh;
+    background: #f7fbff;
+    position: relative;
+    padding-bottom: 75px;
+    overflow: hidden;
+}
+
+
+/* HEADER */
+
+.header {
+    height: 55px;
+    padding: 10px 13px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.calendar-header {
+    width: 23px;
+    height: 23px;
+    color: #315f8b;
+}
+
+.calendar-header svg {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+}
+
+.header-title {
+    font-size: 17px;
+    font-weight: bold;
+    color: #1c3d5c;
+}
+
+.settings {
+    border: none;
+    background: transparent;
+    color: #28547d;
+    font-size: 21px;
+    cursor: pointer;
+}
+
+
+/* SMART REMINDER */
+
+.reminder-card {
+    background: white;
+    margin: 2px 8px 10px;
+    padding: 10px 10px 8px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(30,70,110,.06);
+}
+
+.smart-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.smart-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #5a91ea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 0 4px 10px rgba(52,115,223,.18);
+}
+
+.smart-icon svg {
+    width: 23px;
+    height: 23px;
+    fill: none;
+    stroke: white;
+    stroke-width: 2;
+}
+
+.smart-info {
+    flex: 1;
+}
+
+.smart-title {
+    color: #263f59;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+.smart-subtitle {
+    color: #8998a6;
+    font-size: 9px;
+}
+
+.arrow {
+    color: #91a1af;
+    font-size: 21px;
+}
+
+
+/* DEADLINE ITEMS */
+
+.deadline-item {
+    display: flex;
+    align-items: center;
+    padding: 7px 2px;
+    border-top: 1px solid #f0f3f6;
+}
+
+.deadline-icon {
+    width: 31px;
+    height: 31px;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+    font-size: 15px;
+}
+
+.red-icon {
+    background: #ffe8eb;
+    color: #d85c6e;
+}
+
+.purple-icon {
+    background: #eee9ff;
+    color: #765cc5;
+}
+
+.green-icon {
+    background: #e4f7eb;
+    color: #4da66f;
+}
+
+.deadline-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.deadline-name {
+    color: #354d64;
+    font-size: 10px;
+    font-weight: bold;
+    margin-bottom: 3px;
+        }
+
+.deadline-time {
+    color: #8999a8;
+    font-size: 8px;
+}
+
+.time-badge {
+    font-size: 8px;
+    padding: 5px 7px;
+    border-radius: 10px;
+    white-space: nowrap;
+}
+
+.badge-red {
+     color: #d75c6d;
+    background: #ffedf0;
+}
+
+.badge-blue {
+    color: #397cae;
+    background: #e9f5ff;
+}
+
+.badge-green {
+    color: #43a16a;
+    background: #e5f8ec;
+}
+
+/* WORKLOAD CARD */
+
+.workload-card {
+    background: white;
+    margin: 0 8px 10px;
+    border-radius: 12px;
+    padding: 12px 11px 13px;
+    box-shadow: 0 2px 8px rgba(30,70,110,.06);
+}
+
+.workload-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.workload-title-area {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.workload-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 9px;
+    background: #e6f1ff;
+    color: #3475d5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.workload-icon svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+}
+
+.workload-title {
+    color: #27435e;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+.workload-subtitle {
+    color: #94a2af;
+    font-size: 9px;
+}
+
+.workload-arrow {
+    color: #91a1af;
+    font-size: 21px;
+}
+
+
+/* CHART AREA */
+
+.chart-area {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 5px 10px 2px;
+}
+
+
+/* DONUT */
+
+.donut {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background:
+        conic-gradient(
+            #ed4e61 0% 40%,
+            #3475dc 40% 75%,
+            #2c9c9b 75% 100%
+        );
+    position: relative;
+    flex-shrink: 0;
+}
+
+.donut::after {
+    content: "";
+    position: absolute;
+    width: 67px;
+    height: 67px;
+    background: white;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.donut-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+}
+
+.donut-number {
+    font-size: 19px;
+    font-weight: bold;
+    color: #26435e;
+}
+
+.donut-label {
+    font-size: 8px;
+    color: #8393a1;
+    margin-top: 2px;
+}
+
+
+/* LEGEND */
+
+.legend {
+    flex: 1;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 11px;
+}
+
+.legend-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    margin-right: 7px;
+    }
+
+.high-dot {
+    background: #ed4e61;
+}
+
+.medium-dot {
+    background: #3475dc;
+}
+
+.low-dot {
+    background: #2c9c9b;
+}
+
+.legend-name {
+    color: #566a7b;
+    font-size: 9px;
+    flex: 1;
+}
+
+.legend-percent {
+    color: #354b60;
+    font-size: 9px;
+    font-weight: bold;
+}
+
+
+/* MOTIVATION */
+
+.motivation {
+    min-height: 88px;
+    margin: 0 8px 8px;
+    border-radius: 9px;
+    background:
+        linear-gradient(
+            145deg,
+            #eef7ff,
+            #dceeff
+        );
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.quote {
+    color: #425c72;
+    font-size: 12px;
+    font-style: italic;
+    line-height: 1.5;
+    max-width: 210px;
+}
+
+.leaf-decoration {
+    position: absolute;
+    right: 22px;
+    bottom: 10px;
+    width: 35px;
+    height: 55px;
+}
+
+.leaf-shape {
+    position: absolute;
+    width: 13px;
+    height: 27px;
+    background: #5d99cf;
+    border-radius: 100% 0 100% 0;
+}
+
+.leaf-shape.one {
+    right: 8px;
+    top: 3px;
+    transform: rotate(30deg);
+}
+
+.leaf-shape.two {
+    right: 20px;
+    top: 23px;
+    transform: rotate(-35deg);
+}
+
+.leaf-stem {
+    position: absolute;
+    width: 2px;
+    height: 45px;
+    background: #5990b8;
+    right: 20px;
+    bottom: 0;
+    transform: rotate(12deg);
+}
+
+
+/* BOTTOM NAVIGATION */
+
+.bottom-nav {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 65px;
+    background: white;
+    border-top: 1px solid #e5edf5;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    text-decoration: none;
+    color: #7c8c9a;
+    font-size: 9px;
+}
+
+.nav-item.active {
+    color: #3473df;
+    font-weight: bold;
+}
+
+.nav-icon {
+    width: 21px;
+    height: 21px;
+}
+
+.nav-icon svg {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+}
+
+
+/* EMPTY STATE */
+
+.empty {
+    text-align: center;
+    color: #98a7b5;
+    font-size: 10px;
+    padding: 15px;
+}
+
+
+/* TABLET / DESKTOP */
+
+@media (min-width: 600px) {
+
+    body {
+        padding: 20px;
+        align-items: center;
+    }
+
+    .app {
+        max-width: 600px;
+        min-height: calc(100vh - 40px);
+        border-radius: 22px;
+        box-shadow:
+            0 8px 30px
+            rgba(30,70,110,.10);
+        }
+
+    .bottom-nav {
+        border-radius:
+            0 0 22px 22px;
+    }
+
+}
+
+@media (max-width: 360px) {
+
+    .header-title {
+        font-size: 15px;
+    }
+
+    .chart-area {
+        gap: 12px;
+    }
+
+    .donut {
+        width: 95px;
+        height: 95px;
+    }
+
+    .donut::after {
+        width: 59px;
+        height: 59px;
+    }
+
+    .donut-number {
+        font-size: 17px;
+    }
+
+    .legend-item {
+        margin-bottom: 8px;
+    }
+
+}

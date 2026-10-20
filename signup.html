@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - RemindPro</title>
+    <link rel="stylesheet" href="signup.css">
+    </head>
+
+<body>
+
+    <!-- CALENDAR DESIGNS -->
+    <div class="calendar calendar-1">
+        <span class="ring left"></span>
+        <span class="ring right"></span>
+    </div>
+
+    <div class="calendar calendar-2">
+        <span class="ring left"></span>
+        <span class="ring right"></span>
+    </div>
+
+    <div class="calendar calendar-3">
+        <span class="ring left"></span>
+        <span class="ring right"></span>
+    </div>
+
+    <div class="calendar calendar-4">
+        <span class="ring left"></span>
+        <span class="ring right"></span>
+    </div>
+
+
+    <!-- SIGN UP BOX -->
+    <div class="signup-box">
+
+        <!-- BELL + REMINDPRO -->
+        <div class="brand">
+
+            <div class="bell">
+                <div class="bell-top"></div>
+                <div class="bell-body"></div>
+            </div>
+
+            <h1>RemindPro</h1>
+
+        </div>
+
+
+        <!-- SIGN UP FORM -->
+        <form action="signup.php" method="POST">
+
+            <input
+                type="text"
+                name="name"
+                class="input-box"
+                placeholder="Full Name"
+                required>
+
+            <input
+                type="email"
+                name="email"
+                class="input-box"
+                placeholder="Email"
+                required>
+
+            <input
+                type="password"
+                name="password"
+                class="input-box"
+                placeholder="Password"
+                required>
+
+            <input
+                type="password"
+                name="confirm_password"
+                class="input-box"
+                placeholder="Confirm Password"
+                required>
+
+            <button type="submit" class="signup-btn">
+                Sign Up
+            </button>
+
+        </form>
+
+        <div class="login-text">
+            Already have an account?
+            <a href="login.html">Log In</a>
+        </div>
+
+    </div>
+
+</body>
+</html>

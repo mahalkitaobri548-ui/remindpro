@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RemindPro - Reminders</title>
+    <link rel="stylesheet" href="reminders.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-left">
+            <span class="calendar-header">
+                <svg viewBox="0 0 24 24">
+                    <rect x="3" y="4" width="18" height="17" rx="2"></rect>
+                    <line x1="3" y1="9" x2="21" y2="9"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                </svg>
+            </span>
+
+            <h1 class="header-title">
+                Reminders &amp; Workload
+            </h1>
+
+        </div>
+
+        <button class="settings">⚙</button>
+
+    </header>
+
+
+    <!-- SMART DEADLINE REMINDER -->
+    <section class="reminder-card">
+        <div class="smart-header">
+            <div class="smart-icon">
+                <svg viewBox="0 0 24 24">
+                    <path d=" M18 8 a6 6 0 0 0-12 0 c0 7-3 7-3 9 h18 c0-2-3-2-3-9"></path>
+                    <path d="M10 21h4"></path>
+                </svg>
+            </div>
+
+            <div class="smart-info">
+
+                <p class="smart-title">
+                    Smart Deadline Reminder
+                </p>
+
+                <p class="smart-subtitle">
+                    Never miss a deadline!
+                </p>
+
+            </div>
+
+            <span class="arrow">›</span>
+
+        </div>
+
+
+        <!-- TASKS WILL APPEAR HERE -->
+        <div id="reminderList"></div>
+
+    </section>
+
+
+    <!-- WORKLOAD OVERVIEW -->
+    <section class="workload-card">
+        <div class="workload-header">
+            <div class="workload-title-area">
+                <div class="workload-icon">
+                    <svg viewBox="0 0 24 24">
+                        <rect x="4" y="12" width="4" height="8"></rect>
+                        <rect x="10" y="8" width="4" height="12"></rect>
+                        <rect x="16" y="4" width="4" height="16"></rect>
+                    </svg>
+                </div>
+
+                <div>
+
+                    <p class="workload-title">
+                        Workload Overview
+                    </p>
+
+                    <p class="workload-subtitle">
+                        Your task distribution
+                    </p>
+
+                </div>
+
+            </div>
+
+            <span class="workload-arrow">›</span>
+
+        </div>
+
+
+        <!-- CHART -->
+        <div class="chart-area">
+            <div class="donut">
+                <div class="donut-center">
+                    <div
+                        class="donut-number"
+                        id="totalChartTasks">0</div>
+                    <div class="donut-label">Tasks</div>
+                </div>
+            </div>
+
+
+            <!-- LEGEND -->
+            <div class="legend">
+                <div class="legend-item">
+                    <span class="legend-dot high-dot"></span>
+                    <span class="legend-name">High Priority</span>
+                    <span class="legend-percent" id="highPercent">0%</span>
+                </div>
+
+                <div class="legend-item">
+                    <span class="legend-dot medium-dot"></span>
+                    <span class="legend-name">
+                        Medium Priority
+                    </span>
+
+                    <span
+                        class="legend-percent"
+                        id="mediumPercent">
+                        0%
+                    </span>
+
+                </div>
+
+                <div class="legend-item">
+
+                    <span class="legend-dot low-dot"></span>
+
+                    <span class="legend-name">
+                        Low Priority
+                    </span>
+
+                    <span
+                        class="legend-percent"
+                        id="lowPercent">
+                        0%
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- MOTIVATION -->
+    <section class="motivation">
+
+        <p class="quote">
+            "Better planning today,<br>
+            less stress tomorrow."
+        </p>
+
+        <div class="leaf-decoration">
+
+            <div class="leaf-stem"></div>
+
+            <div class="leaf-shape one"></div>
+
+            <div class="leaf-shape two"></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- BOTTOM NAVIGATION -->
+    <nav class="bottom-nav">
+
+
+        <!-- HOME -->
+        <a
+            href="dashboard.php"
+            class="nav-item">
+
+            <span class="nav-icon">
+
+                <svg viewBox="0 0 24 24">
+
+                    <path d="M3 10.5L12 3l9 7.5"></path>
+
+                    <path d="M5 9.5V21h14V9.5"></path>
+
+                    <path d="M9 21v-7h6v7"></path>
+
+                </svg>
+
+            </span>
+
+            Home
+
+        </a>
+
+
+        <!-- TASKS -->
+        <a
+            href="mytasks.html"
+            class="nav-item">
+
+            <span class="nav-icon">
+
+                <svg viewBox="0 0 24 24">
+
+                    <line x1="7" y1="6" x2="21" y2="6"></line>
+                    <line x1="7" y1="12" x2="21" y2="12"></line>
+                    <line x1="7" y1="18" x2="21" y2="18"></line>
+
+                    <circle cx="3" cy="6" r="1"></circle>
+                    <circle cx="3" cy="12" r="1"></circle>
+                    <circle cx="3" cy="18" r="1"></circle>
+
+                </svg>
+
+            </span>
+
+            Tasks
+
+        </a>
+
+
+        <!-- REMINDERS -->
+        <a
+            href="reminders.html"
+            class="nav-item active">
+
+            <span class="nav-icon">
+
+                <svg viewBox="0 0 24 24">
+
+                    <path d="M18 8 a6 6 0 0 0-12 0 c0 7-3 7-3 9 h18 c0-2-3-2-3-9"></path>
+                    <path d="M10 21h4"></path>
+
+                </svg>
+
+            </span>
+
+            Reminders
+
+        </a>
+
+
+        <!-- PROFILE -->
+        <a
+            href="profile.php"
+            class="nav-item">
+
+            <span class="nav-icon">
+
+                <svg viewBox="0 0 24 24">
+
+                    <circle cx="12" cy="8" r="4"></circle>
+
+                    <path d="M4 21 c0-4 3.5-7 8-7 s8 3 8 7"></path>
+
+                </svg>
+
+            </span>
+
+            Profile
+
+        </a>
+
+    </nav>
+
+</div>
+
+    <script src="reminders.js"></script>
+
+</body>
+</html>
